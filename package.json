@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "yarn --cwd app/browser-app start"
+    "start": "yarn --cwd app/browser-app start",
+    "watch": "lerna run --parallel watch"
   },
   "author": "",
   "license": "ISC",
