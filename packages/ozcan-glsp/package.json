@@ -1,0 +1,33 @@
+{
+  "name": "@ozcan/glsp",
+  "version": "1.0.0",
+  "private": true,
+  "files": [
+    "lib",
+    "src",
+    "style"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "prepare": "yarn clean && yarn build",
+    "watch": "tsc -w",
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@eclipse-glsp/theia-integration": "1.1.0-RC06",
+    "@theia/core": "^1.34.4",
+    "@theia/filesystem": "^1.34.4",
+    "@theia/markers": "^1.34.4",
+    "@theia/outline-view": "^1.34.4",
+    "@theia/output": "^1.34.4",
+    "@theia/preferences": "^1.34.4",
+    "@theia/task": "^1.34.4",
+    "sprotty-theia": "0.13.0-next.9cbedec"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/crossmodel-diagram-frontend-module",
+      "backend": "lib/node/crossmodel-backend-module"
+    }
+  ]
+}

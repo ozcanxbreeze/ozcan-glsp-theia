@@ -6,12 +6,15 @@
   "private": true,
   "scripts": {
     "start": "yarn --cwd app/browser-app start",
-    "watch": "lerna run --parallel watch"
+    "watch": "lerna run --parallel watch",
+    "build": "lerna run build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lerna": "^6.6.2"
+    "lerna": "^6.6.2",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.3"
   },
   "workspaces": [
     "packages/*",
