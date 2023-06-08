@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "prepare": "yarn run clean && yarn build && yarn run download:plugins",
     "clean": "theia clean",
@@ -26,7 +27,8 @@
     "@theia/preferences": "latest",
     "@theia/preview": "latest",
     "@theia/search-in-workspace": "latest",
-    "@theia/terminal": "latest"
+    "@theia/terminal": "latest",
+    "@ozcan/glsp-frontend": "^1.0.0"
   },
   "devDependencies": {
     "@theia/cli": "latest"

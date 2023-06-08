@@ -1,8 +1,6 @@
 {
   "name": "root",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "private": true,
   "scripts": {
     "start": "yarn --cwd app/browser-app start",
