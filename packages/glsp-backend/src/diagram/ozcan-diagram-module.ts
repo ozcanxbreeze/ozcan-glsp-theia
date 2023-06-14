@@ -1,4 +1,4 @@
-import { BindingTarget, DiagramConfiguration, DiagramModule, GModelFactory, GModelIndex, ModelState, SourceModelStorage } from "@eclipse-glsp/server-node";
+import { BindingTarget, DiagramConfiguration, DiagramModule, GModelFactory, GModelIndex, InstanceMultiBinding, ModelState, OperationHandlerConstructor, SourceModelStorage } from "@eclipse-glsp/server-node";
 import { DIAGRAM } from '@ozcan/global'
 import { OzcanDiagramConfig } from "./ozcan-diagram-config";
 import { injectable } from 'inversify'
@@ -6,6 +6,7 @@ import { OzcanStorage } from "../model/ozcan-storage";
 import { OzcanModelState } from "../model/ozcan-model-state";
 import { OzcanGmodelFactory } from "../model/ozcan-gmodel-factory";
 import { OzcanModelIndex } from "../model/ozcan-model-index";
+import { CreateNobeHandler } from "../handler/create-nobe-handler";
 
 @injectable()
 export class OzcanDiagramModule extends DiagramModule{
@@ -27,8 +28,15 @@ export class OzcanDiagramModule extends DiagramModule{
         return OzcanGmodelFactory;
     }
 
-    protected bindGModelIndex(): BindingTarget<GModelIndex> {
+    protected override bindGModelIndex(): BindingTarget<GModelIndex> {
         this.context.bind(OzcanModelIndex).toSelf().inSingletonScope();
         return {service: OzcanModelIndex};
     }
+
+    
+    protected override configureOperationHandlers(binding: InstanceMultiBinding<OperationHandlerConstructor>): void {
+        super.configureOperationHandlers(binding);
+        binding.add(CreateNobeHandler);
+    }
+
 }

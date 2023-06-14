@@ -11,6 +11,8 @@ export class OzcanGmodelFactory implements GModelFactory{
     
     createModel(): void {
         const model = this.modelState.model;
+        this.modelState.index.indexTaskList(model);
+
         const gNobes = model.nobes.map(nobe => this.createNobe(nobe))
         const newRoot = GGraph.builder().id(model.id).addChildren(gNobes).build();
         this.modelState.updateRoot(newRoot);
