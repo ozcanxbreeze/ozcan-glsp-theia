@@ -1,0 +1,17 @@
+{
+  "name": "@ozcan/global",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "prepare": "yarn clean && yarn build",
+    "install:only": "yarn install --ignore-scripts",
+    "clean": "rimraf tsconfig.tsbuildinfo lib bundle",
+    "build": "yarn install:only && tsc",
+    "watch": "yarn watch:tsc",
+    "watch:tsc": "tsc --watch",
+    "start": "node --enable-source-maps lib/index.js"
+  }
+}

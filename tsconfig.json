@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "declaration": true,
+        "declarationMap": true
     }
 }

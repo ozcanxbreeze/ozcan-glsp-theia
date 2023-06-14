@@ -26,8 +26,8 @@
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/crossmodel-diagram-frontend-module",
-      "backend": "lib/node/crossmodel-backend-module"
+      "frontend": "lib/browser/ozcan-frontend-module",
+      "backend": "lib/node/ozcan-backend-module"
     }
   ]
 }

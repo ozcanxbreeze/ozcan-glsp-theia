@@ -5,7 +5,8 @@
   "scripts": {
     "start": "yarn --cwd app/browser-app start",
     "watch": "lerna run --parallel watch",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "clean": "lerna run clean"
   },
   "author": "",
   "license": "ISC",

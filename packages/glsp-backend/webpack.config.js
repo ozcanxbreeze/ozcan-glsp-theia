@@ -1,36 +1,33 @@
 const webpack = require('webpack');
 const path = require('path');
-const buildRoot = path.resolve(__dirname, 'lib');
 const appRoot = path.resolve(__dirname, 'bundle');
 var CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
+    target: 'node',
     mode: 'development',
     devtool: 'source-map',
 
-    entry: [path.resolve(buildRoot, 'index')],
+    entry: './src/index.ts',
     output: {
-        filename: 'ozcan-glsp-server-packed.js',
-        path: appRoot
+        path: appRoot,
+        filename: 'ozcan-glsp-server-packed.js'
     },
-
-
-
-    
     
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
     },
-    target: 'node',
+    
     module: {
         rules: [
-            {
-                test: /\.js$/,
-                use: ['source-map-loader'],
-                enforce: 'pre'
-            }
+           {
+              test: /\.ts$/,
+              exclude: /node_modules/,
+              loader: 'ts-loader'
+           }
         ]
-    },
+     },
+
     plugins: [
         new CircularDependencyPlugin({
             exclude: /(node_modules)\/./,

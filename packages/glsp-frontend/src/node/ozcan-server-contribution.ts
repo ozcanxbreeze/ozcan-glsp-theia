@@ -5,8 +5,10 @@ import {
   GLSPSocketServerContributionOptions,
 } from "@eclipse-glsp/theia-integration/lib/node";
 import { OzcanLanguage } from "../common/ozcan-language";
+import * as path from 'path';
 
 export const DEFAULT_PORT = '5007';
+const MODULE_PATH = path.join(__dirname, '..', '..', '..', 'glsp-backend', 'bundle', 'ozcan-glsp-server-packed.js');
 
 export class OzcanServerContribution extends GLSPSocketServerContribution {
   readonly id = OzcanLanguage.contributionId;
