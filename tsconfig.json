@@ -2,6 +2,11 @@
     "compilerOptions": {
         "skipLibCheck": true,
         "declaration": true,
-        "declarationMap": true
+        "declarationMap": true,
+
+        // Needs to be disabled to support property injection
+        "strictPropertyInitialization": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
     }
 }

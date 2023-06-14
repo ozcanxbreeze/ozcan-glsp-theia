@@ -4,7 +4,7 @@ import { AnyObject } from '@eclipse-glsp/server-node';
 
 export interface Model {
     id: string;
-    nodes : Nobe[];
+    nobes : Nobe[];
     // edges : Edge[];
 }
 

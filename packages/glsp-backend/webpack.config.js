@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const appRoot = path.resolve(__dirname, 'bundle');
-var CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
     target: 'node',
@@ -27,12 +26,6 @@ module.exports = {
            }
         ]
      },
-
-    plugins: [
-        new CircularDependencyPlugin({
-            exclude: /(node_modules)\/./,
-            failOnError: false
-        })
-    ],
+     
     ignoreWarnings: [/Failed to parse source map/, /Can't resolve .* in '.*ws\/lib'/]
 };

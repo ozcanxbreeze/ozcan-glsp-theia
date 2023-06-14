@@ -1,24 +1,34 @@
-import { BindingTarget, DiagramConfiguration, DiagramModule, GModelFactory, ModelState, SourceModelStorage } from "@eclipse-glsp/server-node";
+import { BindingTarget, DiagramConfiguration, DiagramModule, GModelFactory, GModelIndex, ModelState, SourceModelStorage } from "@eclipse-glsp/server-node";
 import { DIAGRAM } from '@ozcan/global'
 import { OzcanDiagramConfig } from "./ozcan-diagram-config";
+import { injectable } from 'inversify'
+import { OzcanStorage } from "../model/ozcan-storage";
+import { OzcanModelState } from "../model/ozcan-model-state";
+import { OzcanGmodelFactory } from "../model/ozcan-gmodel-factory";
+import { OzcanModelIndex } from "../model/ozcan-model-index";
 
-
+@injectable()
 export class OzcanDiagramModule extends DiagramModule{
-    readonly diagramType = DIAGRAM.DIAGRAM_TYPE;
+    readonly diagramType = 'ozcan-diagram';
 
     protected bindDiagramConfiguration(): BindingTarget<DiagramConfiguration> {
         return OzcanDiagramConfig;
     }
 
     protected bindSourceModelStorage(): BindingTarget<SourceModelStorage> {
-        throw new Error("Method not implemented.");
+        return OzcanStorage;
     }
+
     protected bindModelState(): BindingTarget<ModelState> {
-        throw new Error("Method not implemented.");
+        return OzcanModelState;
     }
     
     protected bindGModelFactory(): BindingTarget<GModelFactory> {
-        throw new Error("Method not implemented.");
+        return OzcanGmodelFactory;
     }
 
+    protected bindGModelIndex(): BindingTarget<GModelIndex> {
+        this.context.bind(OzcanModelIndex).toSelf().inSingletonScope();
+        return {service: OzcanModelIndex};
+    }
 }
