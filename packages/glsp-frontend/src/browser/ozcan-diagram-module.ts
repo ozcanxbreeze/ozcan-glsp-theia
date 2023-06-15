@@ -6,12 +6,11 @@ import {
   ConsoleLogger,
   LogLevel,
   configureDefaultModelElements,
-  createDiagramContainer,
+  createClientContainer,
   overrideViewerOptions
 } from "@eclipse-glsp/client";
 
-const ozcanDiagramModule = new ContainerModule(
-  (bind, unbind, isBound, rebind) => {
+const ozcanDiagramModule = new ContainerModule((bind, unbind, isBound, rebind) => {
     rebind(TYPES.ILogger).to(ConsoleLogger).inSingletonScope();
     rebind(TYPES.LogLevel).toConstantValue(LogLevel.warn);
     const context = { bind, unbind, isBound, rebind };
@@ -20,7 +19,7 @@ const ozcanDiagramModule = new ContainerModule(
 });
 
 export default function createOzcanDiagramContainer(widgetId: string): Container {
-    const container  = createDiagramContainer(ozcanDiagramModule);
+    const container  = createClientContainer(ozcanDiagramModule);
 
     overrideViewerOptions(container, {
         baseDiv: widgetId,
@@ -29,5 +28,4 @@ export default function createOzcanDiagramContainer(widgetId: string): Container
     });
 
     return container;
-
 };

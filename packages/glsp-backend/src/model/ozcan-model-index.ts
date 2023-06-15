@@ -6,11 +6,11 @@ import { Model, Nobe } from './ozcan-model';
 export class OzcanModelIndex extends GModelIndex {
     protected nobeIndex = new Map<string, Nobe>();
 
-    indexTaskList(model: Model): void {
+    indexNobeList(model: Model): void {
         model.nobes.forEach(nobe => this.nobeIndex.set(nobe.id, nobe));
     }
 
-    findTask(id: string): Nobe | undefined {
+    findNobe(id: string): Nobe | undefined {
         return this.nobeIndex.get(id);
     }
 }

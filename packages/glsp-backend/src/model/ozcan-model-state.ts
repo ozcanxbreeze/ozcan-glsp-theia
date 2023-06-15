@@ -16,6 +16,6 @@ export class OzcanModelState extends DefaultModelState{
     set model(taskList: Model) {
         this._model
          = taskList;
-        this.index.indexTaskList(taskList);
+        this.index.indexNobeList(taskList);
     }
 }

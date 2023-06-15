@@ -4,6 +4,7 @@
 import { ContainerContext, DiagramConfiguration, GLSPTheiaFrontendModule } from "@eclipse-glsp/theia-integration";
 import { OzcanLanguage } from "../common/ozcan-language";
 import { OzcanDiagramConfiguration } from "./ozcan-diagram-configuration";
+import 'sprotty-theia/css/theia-sprotty.css'; 
 
 export class OzcanTheiaFrontendModule extends GLSPTheiaFrontendModule{
     readonly diagramLanguage = OzcanLanguage;

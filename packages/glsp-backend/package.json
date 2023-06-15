@@ -22,9 +22,10 @@
     "watch": "yarn watch:webpack",
     "watch:tsc": "tsc -b tsconfig.json --watch",
     "watch:webpack": "webpack --mode development --watch",
-    "start": "node --enable-source-maps lib/index.js"
+    "start": "node --enable-source-maps bundle/ozcan-glsp-server-packed.js"
   },
   "devDependencies": {
+    "reflect-metadata": "^0.1.13",
     "ts-loader": "^9.4.3"
   }
 }

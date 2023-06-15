@@ -8,7 +8,8 @@
     "prepare": "yarn run clean && yarn build && yarn run download:plugins",
     "clean": "theia clean",
     "build": "theia build --mode development",
-    "start": "theia start --plugins=local-dir:plugins",
+    "start": "theia start --TASKLIST_GLSP=5007 --root-dir=../../workspace",
+    "start:external": "theia start --TASKLIST_GLSP=5007 --root-dir=../../workspace --debug",
     "download:plugins": "theia download:plugins",
     "watch": "theia build --watch --mode development"
   },

@@ -2,16 +2,16 @@
   "id": "diagram1",
   "nobes": [
     {
-        "id": "Nobe1",
-        "name": "Nobe1",
-        "position": {
-            "x": 203,
-            "y": 110
-        },
-        "size": {
-            "width": 71.36635971069336,
-            "height": 22.5
-        }
+      "id": "Nobe1",
+      "name": "Nobe1",
+      "position": {
+        "x": 312,
+        "y": 120
+      },
+      "size": {
+        "width": 71.36635971069336,
+        "height": 22.5
+      }
     }
   ]
 }

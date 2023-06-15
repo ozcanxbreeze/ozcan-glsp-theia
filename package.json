@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "start": "yarn --cwd app/browser-app start",
+    "start:external": "yarn --cwd app/browser-app start:external",
     "watch": "lerna run --parallel watch",
     "build": "lerna run build",
-    "clean": "lerna run clean"
+    "rebuild:browser": "theia rebuild:browser",
+    "clean": "lerna run clean && yarn clean:root",
+    "clean:root" : "rimraf node_modules"
   },
   "author": "",
   "license": "ISC",

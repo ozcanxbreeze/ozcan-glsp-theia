@@ -11,7 +11,7 @@ export class OzcanGmodelFactory implements GModelFactory{
     
     createModel(): void {
         const model = this.modelState.model;
-        this.modelState.index.indexTaskList(model);
+        this.modelState.index.indexNobeList(model);
 
         const gNobes = model.nobes.map(nobe => this.createNobe(nobe))
         const newRoot = GGraph.builder().id(model.id).addChildren(gNobes).build();
@@ -19,10 +19,18 @@ export class OzcanGmodelFactory implements GModelFactory{
     }
 
     protected createNobe(nobe: Nobe): GNode{
-        const builder = GNode.builder()
-        .id(nobe.id)
-        .add(GLabel.builder().text("test").id(`${nobe.id}_label`).build());
-        
+        const builder = GNode.builder() //
+            .id(nobe.id)
+            .addCssClass('tasklist-node')
+            .add(GLabel.builder().text(nobe.name).id(`${nobe.id}_label`).build())
+            .layout('hbox')
+            .addLayoutOption('paddingLeft', 5)
+            .position(nobe.position);
+
+        if (nobe.size) {
+            builder.addLayoutOptions({ prefWidth: nobe.size.width, prefHeight: nobe.size.height });
+        }
+
         return builder.build();
     }
 }

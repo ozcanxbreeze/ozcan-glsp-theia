@@ -10,22 +10,14 @@ export class OzcanDiagramConfig implements DiagramConfiguration{
     }
 
     get shapeTypeHints(): ShapeTypeHint[]{
-        return [{elementTypeId: DefaultTypes.NODE, deletable: true, reparentable: false, repositionable: true, resizable: true}]
+        return [{elementTypeId: DefaultTypes.NODE, deletable: true, reparentable: false, repositionable: true, resizable: false}]
     }
 
-    get edgeTypeHints(): EdgeTypeHint[]{
-        return [{
-            elementTypeId: DefaultTypes.EDGE, 
-            repositionable: true, 
-            routable: true, 
-            deletable: true, 
-            sourceElementTypeIds: [DefaultTypes.NODE], 
-            targetElementTypeIds: [DefaultTypes.NODE]
-        }]
+    get edgeTypeHints(): EdgeTypeHint[] {
+        return [];
     }
 
-    layoutKind: ServerLayoutKind.AUTOMATIC;
-
-    needsClientLayout = false;
+    layoutKind: ServerLayoutKind.MANUAL;
+    needsClientLayout = true;
     animatedUpdate = true;
 }
