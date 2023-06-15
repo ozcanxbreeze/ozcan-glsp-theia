@@ -1,4 +1,4 @@
-import { GGraph, GLabel, GModelFactory, GNode } from '@eclipse-glsp/server-node';
+import { GCompartment, GGraph, GLabel, GModelFactory, GNode } from '@eclipse-glsp/server-node';
 import { inject, injectable } from 'inversify';
 import { OzcanModelState } from './ozcan-model-state';
 import { Nobe } from './ozcan-model';
@@ -22,9 +22,8 @@ export class OzcanGmodelFactory implements GModelFactory{
         const builder = GNode.builder() //
             .id(nobe.id)
             .addCssClass('nobe-node')
-            
             .add(GLabel.builder().text(nobe.name).id(`${nobe.id}_label`).build())
-            .layout('hbox')
+            .layout('vbox')
             .addLayoutOption('paddingLeft', 5)
             .position(nobe.position);
 
@@ -32,6 +31,23 @@ export class OzcanGmodelFactory implements GModelFactory{
             builder.addLayoutOptions({ prefWidth: nobe.size.width, prefHeight: nobe.size.height });
         }
 
+        const attributes = this.buildAttributes(nobe)
+        builder.add(attributes);
+
         return builder.build();
+    }
+
+    buildAttributes(nobe: Nobe): GCompartment{
+        const compartment = GCompartment.builder().layout("vbox");
+        const attributes = nobe.attributes? nobe.attributes : [];
+
+        for(const [index, attribute] of attributes.entries()){
+            compartment.add(
+                GLabel.builder().text(attribute.name).id(`${nobe.id}_attributes${index}`).build()
+            )
+        }
+
+
+        return compartment.build();
     }
 }

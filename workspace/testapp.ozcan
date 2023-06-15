@@ -3,15 +3,29 @@
   "nobes": [
     {
       "id": "ffc5dc14-1e86-4e49-9af1-bf63f08fd9e8",
-      "name": "NewNobe1",
+      "name": "test1234",
       "position": {
-        "x": 65,
-        "y": 327
+        "x": -36,
+        "y": 187
       },
       "size": {
-        "width": 62.76250076293945,
-        "height": 22
-      }
+        "width": 150.76250076293945,
+        "height": 103
+      },
+      "attributes": [
+        {
+          "name": "test",
+          "id": "test"
+        },
+        {
+          "name": "test2",
+          "id": "test2"
+        },
+        {
+          "name": "test3",
+          "id": "test3"
+        }
+      ]
     },
     {
       "id": "5fa20f50-38b1-4f87-90f0-346cbbed56c8",
@@ -42,11 +56,11 @@
       "name": "NewNobe3",
       "position": {
         "x": 287.0111143035433,
-        "y": 233.61846428702523
+        "y": 234.61846428702523
       },
       "size": {
-        "width": 62.76250076293945,
-        "height": 22
+        "width": 133.76250076293945,
+        "height": 81
       }
     }
   ]

@@ -19,6 +19,12 @@ export interface Nobe{
     name: string;
     position: {x: number; y: number};
     size: {width : number; height: number};
+    attributes?: Array<Attribute>;
+}
+
+export interface Attribute {
+    id: string;
+    name: string;
 }
 
 export namespace Nobe{
