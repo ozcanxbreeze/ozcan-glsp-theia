@@ -1,0 +1,26 @@
+svg {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bbb;
+}
+
+.nobe-node > .sprotty-node {
+    fill: #AAAAAA;
+    stroke: black;
+}
+
+.nobe-node > .sprotty-resize-handle.selected {
+    fill: black;
+}
+
+.nobe-node > .sprotty-node:not(.selected) {
+    stroke-width: 1px;
+}
+
+.sprotty-node.mouseover:not(.selected) {
+    stroke-width: 3px;
+}
+
+.sprotty-node.selected {
+    stroke-width: 3px;
+}

@@ -2,15 +2,51 @@
   "id": "diagram1",
   "nobes": [
     {
-      "id": "Nobe1",
-      "name": "Nobe1",
+      "id": "ffc5dc14-1e86-4e49-9af1-bf63f08fd9e8",
+      "name": "NewNobe1",
       "position": {
-        "x": 312,
-        "y": 120
+        "x": 65,
+        "y": 327
       },
       "size": {
-        "width": 71.36635971069336,
-        "height": 22.5
+        "width": 62.76250076293945,
+        "height": 22
+      }
+    },
+    {
+      "id": "5fa20f50-38b1-4f87-90f0-346cbbed56c8",
+      "name": "NewNobe1",
+      "position": {
+        "x": 238.0111143035433,
+        "y": 71.61846428702523
+      },
+      "size": {
+        "width": 68,
+        "height": 22
+      }
+    },
+    {
+      "id": "4476cd7a-0042-48e7-98a5-7dbbcb0fff49",
+      "name": "NewNobe2",
+      "position": {
+        "x": -7.988885696456691,
+        "y": 48.61846428702523
+      },
+      "size": {
+        "width": 62.76250076293945,
+        "height": 22
+      }
+    },
+    {
+      "id": "672c3d3a-4dd5-4720-8e97-620272e65fcd",
+      "name": "NewNobe3",
+      "position": {
+        "x": 287.0111143035433,
+        "y": 233.61846428702523
+      },
+      "size": {
+        "width": 62.76250076293945,
+        "height": 22
       }
     }
   ]

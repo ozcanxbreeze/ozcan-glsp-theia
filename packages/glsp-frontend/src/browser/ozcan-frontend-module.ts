@@ -5,6 +5,7 @@ import { ContainerContext, DiagramConfiguration, GLSPTheiaFrontendModule } from 
 import { OzcanLanguage } from "../common/ozcan-language";
 import { OzcanDiagramConfiguration } from "./ozcan-diagram-configuration";
 import 'sprotty-theia/css/theia-sprotty.css'; 
+import '../../src/style/diagram.css';
 
 export class OzcanTheiaFrontendModule extends GLSPTheiaFrontendModule{
     readonly diagramLanguage = OzcanLanguage;
@@ -15,5 +16,3 @@ export class OzcanTheiaFrontendModule extends GLSPTheiaFrontendModule{
 }
 
 export default new OzcanTheiaFrontendModule();
-
-

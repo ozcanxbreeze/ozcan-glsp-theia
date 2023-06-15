@@ -10,7 +10,7 @@ export class OzcanDiagramConfig implements DiagramConfiguration{
     }
 
     get shapeTypeHints(): ShapeTypeHint[]{
-        return [{elementTypeId: DefaultTypes.NODE, deletable: true, reparentable: false, repositionable: true, resizable: false}]
+        return [{elementTypeId: DefaultTypes.NODE, deletable: true, reparentable: false, repositionable: true, resizable: true}]
     }
 
     get edgeTypeHints(): EdgeTypeHint[] {

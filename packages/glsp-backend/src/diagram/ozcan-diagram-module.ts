@@ -1,5 +1,5 @@
 import { ActionHandlerConstructor, BindingTarget, ComputedBoundsActionHandler, DiagramConfiguration, DiagramModule, GModelFactory, GModelIndex, InstanceMultiBinding, ModelState, OperationHandlerConstructor, SourceModelStorage } from "@eclipse-glsp/server-node";
-// import { DIAGRAM } from '@ozcan/global'
+import { DIAGRAM } from '@ozcan/global'
 import { OzcanDiagramConfig } from "./ozcan-diagram-config";
 import { injectable } from 'inversify'
 import { OzcanStorage } from "../model/ozcan-storage";
@@ -12,7 +12,7 @@ import { DeleteNobeHandler } from "../handler/delete-nobe-handler";
 
 @injectable()
 export class OzcanDiagramModule extends DiagramModule{
-    readonly diagramType = 'ozcan-diagram';
+    readonly diagramType = DIAGRAM.DIAGRAM_TYPE;
 
     protected bindDiagramConfiguration(): BindingTarget<DiagramConfiguration> {
         return OzcanDiagramConfig;

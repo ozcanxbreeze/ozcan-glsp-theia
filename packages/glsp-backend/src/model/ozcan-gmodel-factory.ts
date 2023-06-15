@@ -21,7 +21,8 @@ export class OzcanGmodelFactory implements GModelFactory{
     protected createNobe(nobe: Nobe): GNode{
         const builder = GNode.builder() //
             .id(nobe.id)
-            .addCssClass('tasklist-node')
+            .addCssClass('nobe-node')
+            
             .add(GLabel.builder().text(nobe.name).id(`${nobe.id}_label`).build())
             .layout('hbox')
             .addLayoutOption('paddingLeft', 5)
