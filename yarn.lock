@@ -1943,7 +1943,7 @@
     "@theia/monaco-editor-core" "1.72.3"
     anser "^2.0.1"
 
-"@theia/core@1.37.2", "@theia/core@^1.18.0", "@theia/core@^1.34.0", "@theia/core@^1.34.4":
+"@theia/core@1.37.2", "@theia/core@^1.18.0", "@theia/core@^1.34.0", "@theia/core@^1.34.4", "@theia/core@^1.37.2":
   version "1.37.2"
   resolved "https://registry.yarnpkg.com/@theia/core/-/core-1.37.2.tgz#019329d228a0820390f67ede84ee77c420e5aeb4"
   integrity sha512-d0Lkz2W1+Fi0hCWMFqpVZJm/1o7IIsc+Cj7z7Dy7ikhQk4TMD1coyleibQf/rmsLvYf1xzLr1xah8b6d4VannQ==
@@ -2076,7 +2076,7 @@
     "@theia/workspace" "1.37.2"
     "@vscode/ripgrep" "^1.14.2"
 
-"@theia/filesystem@1.37.2", "@theia/filesystem@^1.18.0", "@theia/filesystem@^1.34.4":
+"@theia/filesystem@1.37.2", "@theia/filesystem@^1.18.0", "@theia/filesystem@^1.34.4", "@theia/filesystem@^1.37.2":
   version "1.37.2"
   resolved "https://registry.yarnpkg.com/@theia/filesystem/-/filesystem-1.37.2.tgz#a45040c727338d0024e01fb99cb4005a736220e2"
   integrity sha512-8dF7jzc/4J+7g4NDrWfniri8m2z/6P9xLbYfq7f2SI5Wv2EBbguT7op5JKXbiX98q1Liza1FaXVacx59uNNang==
@@ -2337,6 +2337,14 @@
     "@theia/core" "1.37.2"
     node-pty "0.11.0-beta17"
     string-argv "^0.1.1"
+
+"@theia/property-view@^1.37.2":
+  version "1.37.2"
+  resolved "https://registry.yarnpkg.com/@theia/property-view/-/property-view-1.37.2.tgz#c5668357f95f6aa31a731803b59e4fb7d28ad3a0"
+  integrity sha512-/6Qnt63alxyN08dkEsehhcfzNXcZuDB20SZ3UZTuTroMQoT5bdiUMVNYod2aXoKiyL83ToKNNpdhWETws1Nlbw==
+  dependencies:
+    "@theia/core" "1.37.2"
+    "@theia/filesystem" "1.37.2"
 
 "@theia/request@1.37.2":
   version "1.37.2"

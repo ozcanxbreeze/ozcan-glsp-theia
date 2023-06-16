@@ -29,7 +29,8 @@
     "@theia/preview": "latest",
     "@theia/search-in-workspace": "latest",
     "@theia/terminal": "latest",
-    "@ozcan/glsp-frontend": "^1.0.0"
+    "@ozcan/glsp-frontend": "^1.0.0",
+    "@ozcan/property-view":  "^1.0.0"
   },
   "devDependencies": {
     "@theia/cli": "latest"

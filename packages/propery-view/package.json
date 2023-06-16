@@ -1,0 +1,24 @@
+{
+  "name": "@ozcan/property-view",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo",
+    "lint": "eslint -c ../../.eslintrc.js --ext .ts,.tsx ./src",
+    "prepare": "yarn clean && yarn build",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "@theia/core": "^1.37.2",
+    "@theia/filesystem": "^1.37.2",
+    "@theia/property-view": "^1.37.2"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/pv-frontend-module",
+      "backend": "lib/node/pv-backend-module"
+    }
+  ]
+}
