@@ -1020,7 +1020,7 @@
     inversify "5.1.1"
     winston "^3.3.3"
 
-"@eclipse-glsp/theia-integration@^1.0.0-theia1.27.0":
+"@eclipse-glsp/theia-integration@^1.0.0-theia1.27.0", "@eclipse-glsp/theia-integration@^1.0.0-theia1.34.0":
   version "1.0.0-theia1.34.0"
   resolved "https://registry.yarnpkg.com/@eclipse-glsp/theia-integration/-/theia-integration-1.0.0-theia1.34.0.tgz#74f589797dcf18635ff0da6df7fa0d3ae593c7a6"
   integrity sha512-WV1mhD0jhv7/woigdW8MYw1JKzdnGhJDKATv7NpCIpbrj+vwEyK6/hM7EadkGF1XJlwYBv8JcTVMsKJqukkAag==
@@ -1943,7 +1943,7 @@
     "@theia/monaco-editor-core" "1.72.3"
     anser "^2.0.1"
 
-"@theia/core@1.37.2", "@theia/core@^1.18.0", "@theia/core@^1.34.0", "@theia/core@^1.34.4", "@theia/core@^1.37.2":
+"@theia/core@1.37.2", "@theia/core@^1.18.0", "@theia/core@^1.34.0", "@theia/core@^1.34.4", "@theia/core@^1.37.2", "@theia/core@latest":
   version "1.37.2"
   resolved "https://registry.yarnpkg.com/@theia/core/-/core-1.37.2.tgz#019329d228a0820390f67ede84ee77c420e5aeb4"
   integrity sha512-d0Lkz2W1+Fi0hCWMFqpVZJm/1o7IIsc+Cj7z7Dy7ikhQk4TMD1coyleibQf/rmsLvYf1xzLr1xah8b6d4VannQ==
@@ -2048,7 +2048,7 @@
     "@theia/editor" "1.37.2"
     "@theia/navigator" "1.37.2"
 
-"@theia/editor@1.37.2", "@theia/editor@^1.18.0":
+"@theia/editor@1.37.2", "@theia/editor@^1.18.0", "@theia/editor@latest":
   version "1.37.2"
   resolved "https://registry.yarnpkg.com/@theia/editor/-/editor-1.37.2.tgz#4e77164d00e082133300d6300e0d43b66d9d26af"
   integrity sha512-BoN7y5sAlVUPK68x/QhcH9R2X/maVlE5Oqd3+/0TEFCXLEQl+fZHcKlvlXm+0OFHRJw2sGacuPxMIe6iDYMVAA==
@@ -2076,7 +2076,7 @@
     "@theia/workspace" "1.37.2"
     "@vscode/ripgrep" "^1.14.2"
 
-"@theia/filesystem@1.37.2", "@theia/filesystem@^1.18.0", "@theia/filesystem@^1.34.4", "@theia/filesystem@^1.37.2":
+"@theia/filesystem@1.37.2", "@theia/filesystem@^1.18.0", "@theia/filesystem@^1.34.4", "@theia/filesystem@^1.37.2", "@theia/filesystem@latest":
   version "1.37.2"
   resolved "https://registry.yarnpkg.com/@theia/filesystem/-/filesystem-1.37.2.tgz#a45040c727338d0024e01fb99cb4005a736220e2"
   integrity sha512-8dF7jzc/4J+7g4NDrWfniri8m2z/6P9xLbYfq7f2SI5Wv2EBbguT7op5JKXbiX98q1Liza1FaXVacx59uNNang==
@@ -2172,7 +2172,7 @@
   resolved "https://registry.yarnpkg.com/@theia/monaco-editor-core/-/monaco-editor-core-1.72.3.tgz#911d674c6e0c490442a355cfaa52beec919a025e"
   integrity sha512-2FK5m0G5oxiqCv0ZrjucMx5fVgQ9Jqv0CgxGvSzDc4wRrauBdeBoX90J99BEIOJ8Jp3W0++GoRBdh0yQNIGL2g==
 
-"@theia/monaco@1.37.2", "@theia/monaco@^1.18.0":
+"@theia/monaco@1.37.2", "@theia/monaco@^1.18.0", "@theia/monaco@latest":
   version "1.37.2"
   resolved "https://registry.yarnpkg.com/@theia/monaco/-/monaco-1.37.2.tgz#7db8436bc353128cf041a4fa4eddd957c1d84c5e"
   integrity sha512-n9s3Gn5o2RV2ZITmesPTT1HkB8t2Cvt4x063gP5MJwh34+KdsOYj5oNKnX/qQPtRWRVHsqRhaQIeDgAK+Cfkuw==
@@ -2329,7 +2329,7 @@
     highlight.js "10.4.1"
     markdown-it-anchor "~5.0.0"
 
-"@theia/process@1.37.2":
+"@theia/process@1.37.2", "@theia/process@latest":
   version "1.37.2"
   resolved "https://registry.yarnpkg.com/@theia/process/-/process-1.37.2.tgz#8b560aead36bbf18a19abe72f07f74704cd0526b"
   integrity sha512-WiDHkkCRrhTIUuFFHbGWKlMFZIYGlcVAIG/Lv07R6068kYZPHz2S97/X/nUR/p5+kS+QX2EEw3eFKKQ6Xj+6zQ==
@@ -2461,7 +2461,7 @@
   dependencies:
     "@theia/core" "1.37.2"
 
-"@theia/workspace@1.37.2":
+"@theia/workspace@1.37.2", "@theia/workspace@latest":
   version "1.37.2"
   resolved "https://registry.yarnpkg.com/@theia/workspace/-/workspace-1.37.2.tgz#96000f4aec51512192b20a6b132c08dfa1558a33"
   integrity sha512-cC1JUTZwENoU6WAcQF0IkcFu5L3NBAbKV5q85iaEZMvjTXU/frR3pLaDgA7UchGUUiQcRfHQRi37dL69QQdWEA==
@@ -3551,6 +3551,11 @@ balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
+balloon-css@^0.5.0:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/balloon-css/-/balloon-css-0.5.2.tgz#9e2163565a136c9d4aa20e8400772ce3b738d3ff"
+  integrity sha512-zheJpzwyNrG4t39vusA67v3BYg1HTVXOF8cErPEHzWK88PEOFwgo6Ea9VHOgOWNMgeuOtFVtB73NE2NWl9uDyQ==
 
 base64-js@^1.3.1:
   version "1.5.1"

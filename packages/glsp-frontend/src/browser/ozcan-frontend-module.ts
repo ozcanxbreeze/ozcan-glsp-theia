@@ -6,6 +6,7 @@ import { OzcanLanguage } from "../common/ozcan-language";
 import { OzcanDiagramConfiguration } from "./ozcan-diagram-configuration";
 import 'sprotty-theia/css/theia-sprotty.css'; 
 import '../../src/style/diagram.css';
+import 'balloon-css/balloon.min.css';
 
 export class OzcanTheiaFrontendModule extends GLSPTheiaFrontendModule{
     readonly diagramLanguage = OzcanLanguage;

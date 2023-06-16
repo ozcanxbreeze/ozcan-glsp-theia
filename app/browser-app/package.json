@@ -29,6 +29,14 @@
     "@theia/preview": "latest",
     "@theia/search-in-workspace": "latest",
     "@theia/terminal": "latest",
+    "@theia/core": "latest",
+
+    "@theia/editor": "latest",
+    "@theia/filesystem": "latest",
+    "@theia/monaco": "latest",
+    "@theia/process": "latest",
+    "@theia/workspace": "latest",
+    
     "@ozcan/glsp-frontend": "^1.0.0",
     "@ozcan/property-view":  "^1.0.0"
   },

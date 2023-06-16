@@ -13,7 +13,12 @@
   "dependencies": {
     "@theia/core": "^1.37.2",
     "@theia/filesystem": "^1.37.2",
-    "@theia/property-view": "^1.37.2"
+    "@theia/property-view": "^1.37.2",
+
+    "@ozcan/glsp-backend": "^1.0.0",
+
+    "@eclipse-glsp/server-node": "^1.0.0",
+    "@eclipse-glsp/theia-integration": "^1.0.0-theia1.34.0"
   },
   "theiaExtensions": [
     {
