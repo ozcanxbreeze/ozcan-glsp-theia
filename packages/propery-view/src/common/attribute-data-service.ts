@@ -2,7 +2,7 @@ import { Nobe } from '@ozcan/glsp-backend/lib/model/ozcan-model'
 import { inject, injectable } from '@theia/core/shared/inversify';
 import { PropertyDataService } from '@theia/property-view/lib/browser/property-data-service';
 import { isSprottySelection } from '@eclipse-glsp/theia-integration';
-import { OzcanModelState } from '@ozcan/glsp-backend/lib/model/ozcan-model-state'
+import { AttributePropertyServer } from '../node/property-server';
 
 export interface AttributePropertyObject {
     id: string;
@@ -22,8 +22,7 @@ export class AttributeDataService implements PropertyDataService {
     id = "attributes-info";
     label = "AttributeDataService" ;
 
-    @inject(OzcanModelState)
-    modelState : OzcanModelState;
+    @inject(AttributePropertyServer) protected attributeServer : AttributePropertyServer;
 
     canHandleSelection(selection: NobeSelection | undefined): number {
         if (selection) {
@@ -33,23 +32,15 @@ export class AttributeDataService implements PropertyDataService {
         return isSprottySelection(selection) ? 1 : 0;
     }
 
-    providePropertyData(selection: NobeSelection | undefined): Promise<Object | undefined> {
+    async providePropertyData(selection: NobeSelection | undefined): Promise<Object | undefined> {
         if (selection ) {
             delete selection.additionalSelectionData;    
         }else{
             return Promise.reject();
         }
-        
-        const nobe =  this.modelState.index.findNobe(selection.selectedElementsIDs[0])
 
         if (isSprottySelection(selection)){
-            console.log("ikbenhier")
-
-            const result =  {
-                id : "test",
-                uri : "test1234",
-                nobe : nobe
-            }
+            const result = this.attributeServer.getNobe(selection.selectedElementsIDs[0]);
 
             return Promise.resolve(result);
         } else {

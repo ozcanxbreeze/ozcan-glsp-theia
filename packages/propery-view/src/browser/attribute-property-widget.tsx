@@ -22,9 +22,6 @@ export class AttributeWidget extends ReactWidget implements PropertyViewContentW
     }
 
     updatePropertyViewContent(propertyDataService?: PropertyDataService, selection?: Object | undefined): void {
-        console.log("test", selection)
-        console.log("test2", propertyDataService)
-
         if (propertyDataService) {
             propertyDataService.providePropertyData(selection).then((nodeInfo) => this.currentNode = nodeInfo);
         }
